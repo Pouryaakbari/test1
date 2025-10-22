@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/stayle.css">
 </head>
 <body>
-     <nav>
+     <nav class="blue darken-3">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a href="#!" class="white-text">home</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger white-text"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
         <li><a href="badges.html">Components</a></li>
@@ -23,10 +24,21 @@
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
+  <li><div class="user-view">
+      <div class="background">
+        <img src="/assets/imags/back grand.jpg " class="w-100">
+      </div>
+      <a href="#user"><img class="circle" src="/assets/imags/carbar.png"></a>
+      <a href="#name"><span class="white-text name">user-name </span></a>
+      <a href="#email"><span class="white-text email">user-email@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">record_voice_over</i>poshtibani</a></li>
+    <li><a href="tel:+989123456789"> <i class="material-icons">phone</i>call</a></li>
+    <li><a href="https://t.me/poshtiban_sayt"><i class="material-icons">send</i>telegram</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">home</a></li>
+    <li><a class="waves-effect" href="#!">users</a></li>
   </ul>
 
 
