@@ -13,3 +13,11 @@
         align-items: center !important;
     }
 }
+@media(max-width:600px){
+    .top-navbar{
+        box-shadow: 0 0 30px gray !important;
+    }
+    .lin-grad-rgb{
+        background: linear-gradient(to right, rgba(92, 248, 87, 0), rgb(172, 194, 171));
+    }
+}
