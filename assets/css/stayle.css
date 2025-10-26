@@ -20,4 +20,13 @@
     .lin-grad-rgb{
         background: linear-gradient(to right, rgba(92, 248, 87, 0), rgb(172, 194, 171));
     }
+        
+}
+   
+.background{
+    background-image: url("/assets/imags/عکس-طبیعت-با-کیفیت-بالا-رودخانه.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
