@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/assets/materialize/css/materialize.min.css" />
+    <link rel="stylesheet" href="/assets/materialize/css/materialize-rtl.css">
 
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -14,15 +15,15 @@
     <link rel="stylesheet" href="/assets/css/stayle.css" />
   </head>
 
-  <body>
+  <body dir="rtl">
     <!-- navbar section_____start________ -->
     <nav class="white z-depth-0 top-navbar">
       <div class="nav-wrapper">
         <a href="#!" class="blue-text hide-on-med-and-up">users managaement</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger blue-text"
-          ><i class="material-icons">menu</i></a
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger blue-text right  right "
+          ><i class="material-icons ">menu</i></a
         >
-        <ul class="hide-on-med-and-down">
+        <ul class=" hide-on-med-and-down dis-flex">
           <li><a href="/assets/index.html" class="blue-text">home </a></li>
           <li>
             <a href="/assets/users.html" class="blue-text">users managaement</a>
@@ -54,15 +55,15 @@
       </li>
       <li>
         <a href="#!"
-          ><i class="material-icons">record_voice_over</i>poshtibani</a
+          ><i class="material-icons right sidnav-link-icon">record_voice_over</i>poshtibani</a
         >
       </li>
       <li>
-        <a href="tel:+989123456789"> <i class="material-icons">phone</i>call</a>
+        <a href="tel:+989123456789"> <i class="material-icons right sidnav-link-icon">phone</i>call</a>
       </li>
       <li>
         <a href="https://t.me/poshtiban_sayt"
-          ><i class="material-icons">send</i>telegram</a
+          ><i class="material-icons right sidnav-link-icon">send</i>telegram</a
         >
       </li>
       <li>
@@ -268,12 +269,12 @@
         </div>
         <div class="pagination-buttons">
           <i
-            class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-1 rounded-pill white-text waves-effect waves-light"
-            >keyboard_arrow_left</i
-          >
+          class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-1 rounded-pill white-text waves-effect waves-light"
+          >keyboard_arrow_right</i
+        >
           <i
-            class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-1 rounded-pill white-text waves-effect waves-light"
-            >keyboard_arrow_right</i
+          class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-1 rounded-pill white-text waves-effect waves-light"
+          >keyboard_arrow_left</i
           >
         </div>
       </div>
@@ -284,7 +285,7 @@
 
 
     <div class="add-user-modal-back dis-none"></div>
-    <div class="add-user-modal rounded_top_30 container ">
+    <div class="add-user-modal rounded_top_30 container trans-0-3 ">
       <div class="row p-l-40 p-r-40 p-t-10 p-b-10 center-on-small-only">
         <h5>
           <i class="material-icons pos-relative top-4 m-l-10 m-r-10 ">person_add</i>

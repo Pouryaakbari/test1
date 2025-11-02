@@ -1,65 +1,84 @@
-.w-100{
-    width: 100%;
+@font-face {
+  font-family: "BYekan";
+  src: url("/assets/fonts/BYekan/BYekan-webfont.eot") format("eot"),
+        url("/assets/fonts/BYekan/BYekan-webfont.ttf") format("ttf"),
+        url("/assets/fonts/BYekan/BYekan-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
-.rounded-pill{
-    border-radius: 5rem;
-}
-@media(min-width:600px){
-    .top-navbar{
-        box-shadow: 0 0 50px gray !important;
-    }
-    #top-actions-section{
-        display: flex !important;
-        align-items: center !important;
-    }
-}
-@media(max-width:600px){
-    .top-navbar{
-        box-shadow: 0 0 30px gray !important;
-    }
-    .lin-grad-rgb{
-        background: linear-gradient(to right, rgba(92, 248, 87, 0), rgb(172, 194, 171));
-    }
-        
-}
-   
-.background{
-    background-image: url("/assets/imags/عکس-طبیعت-با-کیفیت-بالا-رودخانه.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+* {
+  direction: rtl;
 }
 
-.user-list-item.active  .user-list-arrow-icon{
-    transform: rotate(180deg);
+.w-100 {
+  width: 100%;
 }
-.user-list-item.active , .user-list-item.active .collapsible-header{
-    background-color: rgba(128, 128, 128, 0.24);
+.rounded-pill {
+  border-radius: 5rem;
+}
+@media (min-width: 600px) {
+  .top-navbar {
+    box-shadow: 0 0 50px gray !important;
+  }
+  #top-actions-section {
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+@media (max-width: 600px) {
+  .top-navbar {
+    box-shadow: 0 0 30px gray !important;
+  }
+  .lin-grad-rgb {
+    background: linear-gradient(
+      to right,
+      rgba(92, 248, 87, 0),
+      rgb(172, 194, 171)
+    );
+  }
+}
+
+.background {
+  background-image: url("/assets/imags/عکس-طبیعت-با-کیفیت-بالا-رودخانه.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.user-list-item.active .user-list-arrow-icon {
+  transform: rotate(180deg);
+}
+.user-list-item.active,
+.user-list-item.active .collapsible-header {
+  background-color: rgba(128, 128, 128, 0.24);
 }
 table.highlight > tbody > tr:hover {
   background-color: #90caf9;
 }
-.add-user-modal-back{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
-    top: 0;
-    left: 0;
-    z-index: 999;
+.add-user-modal-back {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
-.add-user-modal{
-    position: fixed;
-    width: 100%;
-    height: 70vh;
-    background-color: white;
-    z-index: 1000;
-    right:0;
-    left: 0;
-    bottom:-70vh;
+.add-user-modal {
+  position: fixed;
+  width: 100%;
+  height: 70vh;
+  background-color: white;
+  z-index: 1000;
+  right: 0;
+  left: 0;
+  bottom: -70vh;
 }
-.add-user-modal.show{
-    box-shadow: 0 0 10px blue ;
-    bottom: 0;
+.add-user-modal.show {
+  box-shadow: 0 0 10px blue;
+  bottom: 0;
+}
+.sidnav-link-icon {
+  margin: 0 0 0 20px !important;
 }
