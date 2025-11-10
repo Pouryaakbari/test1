@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/assets/materialize/css/materialize.min.css" />
     <!-- <link rel="stylesheet" href="/assets/materialize/css/materialize-rtl.css"> -->
-     <!-- راست چین کردن قالب  -->
+    <!-- راست چین کردن قالب  -->
 
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -16,15 +16,15 @@
     <link rel="stylesheet" href="/assets/css/stayle.css" />
   </head>
 
-  <body>
+  <body x-data="userData()">
     <!-- navbar section_____start________ -->
     <nav class="white z-depth-0 top-navbar">
       <div class="nav-wrapper">
         <a href="#!" class="blue-text hide-on-med-and-up">users managaement</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger blue-text "
-          ><i class="material-icons ">menu</i></a
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger blue-text"
+          ><i class="material-icons">menu</i></a
         >
-        <ul class=" hide-on-med-and-down ">
+        <ul class="hide-on-med-and-down">
           <li><a href="/assets/index.html" class="blue-text">home </a></li>
           <li>
             <a href="/assets/users.html" class="blue-text">users managaement</a>
@@ -56,15 +56,15 @@
       </li>
       <li>
         <a href="#!"
-          ><i class="material-icons ">record_voice_over</i>poshtibani</a
+          ><i class="material-icons">record_voice_over</i>poshtibani</a
         >
       </li>
       <li>
-        <a href="tel:+989123456789"> <i class="material-icons ">phone</i>call</a>
+        <a href="tel:+989123456789"> <i class="material-icons">phone</i>call</a>
       </li>
       <li>
         <a href="https://t.me/poshtiban_sayt"
-          ><i class="material-icons ">send</i>telegram</a
+          ><i class="material-icons">send</i>telegram</a
         >
       </li>
       <li>
@@ -80,7 +80,8 @@
     <section id="top-actions-section" class="row m-b-0">
       <!-- add button -->
       <div class="p-l-10 p-r-10 p-t-10 m-t-10 col s12 m4 l3">
-        <button id="add-user-button"
+        <button
+          id="add-user-button"
           class="waves-effect waves-light btn blue darken-2 w-100 p-l-30 p-r-30 rounded-pill flex-c"
         >
           <i class="material-icons m-r-5">add</i>
@@ -100,7 +101,7 @@
       <div class="col l2"></div>
     </section>
 
-    <section class="user-list-section">
+    <section class="user-list-section" x-init="getUsers()">
       <ul class="collapsible hide-on-med-and-up">
         <li class="user-list-item">
           <div class="collapsible-header">
@@ -205,55 +206,27 @@
               <th>action</th>
             </tr>
           </thead>
-          <tbody class="desktop-tabel-tbody">
-            <tr>
-              <td>1</td>
-              <td>Pourya</td>
-              <td>akbari</td>
-              <td>test@email.com</td>
-              <td>khorasan razavi</td>
-              <td>
-                <i class="material-icons red-text m-l-5 m-r-5 hov-pointer"
-                  >delete_forever</i
-                >
-                <i
-                  class="material-icons orange-text darken-3 m-l-5 m-r-5 hov-pointer"
-                  >edit</i
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Pourya</td>
-              <td>akbari</td>
-              <td>test@email.com</td>
-              <td>khorasan razavi</td>
-              <td>
-                <i class="material-icons red-text m-l-5 m-r-5 hov-pointer"
-                  >delete_forever</i
-                >
-                <i
-                  class="material-icons orange-text darken-3 m-l-5 m-r-5 hov-pointer"
-                  >edit</i
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Pourya</td>
-              <td>akbari</td>
-              <td>test@email.com</td>
-              <td>khorasan razavi</td>
-              <td>
-                <i class="material-icons red-text m-l-5 m-r-5 hov-pointer"
-                  >delete_forever</i
-                >
-                <i
-                  class="material-icons orange-text darken-3 m-l-5 m-r-5 hov-pointer"
-                  >edit</i
-                >
-              </td>
-            </tr>
+          <tbody class="desktop-tabel-tbody" >
+            <template x-for="user in users">
+
+              <tr>
+                <td x-text="user.id"></td>
+                <td x-text="user.name"></td>
+                <td x-text="user.username"></td>
+                <td x-text="user.email"></td>
+                <td x-text="user.address.city+'-'+user.address.street"></td>
+                <td>
+                  <i class="material-icons red-text m-l-5 m-r-5 hov-pointer"
+                    >delete_forever</i
+                  >
+                  <i
+                    class="material-icons orange-text darken-3 m-l-5 m-r-5 hov-pointer"
+                    >edit</i
+                  >
+                </td>
+              </tr>
+            </template>
+           
           </tbody>
         </table>
       </div>
@@ -274,62 +247,60 @@
         </div>
         <div class="pagination-buttons">
           <i
-          class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-1 rounded-pill white-text waves-effect waves-light"
-          >keyboard_arrow_left</i
+            class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-1 rounded-pill white-text waves-effect waves-light"
+            >keyboard_arrow_left</i
           >
           <i
-          class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-1 rounded-pill white-text waves-effect waves-light"
-          >keyboard_arrow_right</i
-        >
+            class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-1 rounded-pill white-text waves-effect waves-light"
+            >keyboard_arrow_right</i
+          >
         </div>
       </div>
     </section>
 
-    <!-- <section id="test-section " class="grey" x-data="{masseg:'i love you'}" >
-      <span x-text="masseg"></span>
-      <button x-on:click="masseg='i love tehran' " class="btn">ddd</button>
-      jfyufyufyuf
-    </section> -->
-
 
 
     <div class="add-user-modal-back dis-none"></div>
-    <div class="add-user-modal rounded_top_30 container trans-0-3 ">
+    <div class="add-user-modal rounded_top_30 container trans-0-3">
       <div class="row p-l-40 p-r-40 p-t-10 p-b-10 center-on-small-only">
         <h5>
-          <i class="material-icons pos-relative top-4 m-l-10 m-r-10 ">person_add</i>
+          <i class="material-icons pos-relative top-4 m-l-10 m-r-10"
+            >person_add</i
+          >
           add users
         </h5>
         <form action="">
-          <div class="input-field col s12 ">
-            <input id="name" type="text" class="validate" >
+          <div class="input-field col s12">
+            <input id="name" type="text" class="validate" />
             <label for="name">name:</label>
           </div>
-          
+
           <div class="input-field col s12">
-            <input id="user-name" type="text"  class="validate">
+            <input id="user-name" type="text" class="validate" />
             <label for="user-name">user name: </label>
           </div>
           <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
-            <label for="Email">Email</label>
+            <input id="email" type="email" class="validate" />
+            <label for="email">Email</label>
           </div>
           <div class="input-field col s12">
-            <input id="address" type="text" class="validate">
+            <input id="address" type="text" class="validate" />
             <label for="address">address:</label>
           </div>
-          <button type="button" class="blue darken-1 btn waves-effect waves-light m-t-20 m-b-10 w-full max-w-250 rounded-pill ">
+          <button
+            type="button"
+            class="blue darken-1 btn waves-effect waves-light m-t-20 m-b-10 w-full max-w-250 rounded-pill"
+          >
             submid
           </button>
-
         </form>
       </div>
- 
-      
     </div>
 
     <!-- content section ___end_________ -->
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="/assets/js/alpainejscontollers/usercontollers.js"></script>
     <script src="/assets/materialize/js/materialize.min.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/users.js"></script>
