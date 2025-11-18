@@ -82,7 +82,7 @@
       <div class="p-l-10 p-r-10 p-t-10 m-t-10 col s12 m4 l3">
         <button
           id="add-user-button"
-          class="waves-effect waves-light btn blue darken-2 w-100 p-l-30 p-r-30 rounded-pill flex-c"
+          class="waves-effect waves-light btn blue darken-2 w-100 p-l-30 p-r-30 rounded-pill flex-c" x-on:click="showaddmodal= true"
         >
           <i class="material-icons m-r-5">add</i>
           add user
@@ -219,8 +219,8 @@
 
 
 
-    <div class="add-user-modal-back dis-none"></div>
-    <div class="add-user-modal rounded_top_30 container trans-0-3">
+    <div class="add-user-modal-back " x-bind:class="{'dis-none':!showaddmodal}" x-on:click="showaddmodal=false"></div>
+    <div class="add-user-modal rounded_top_30 container trans-0-3" x-bind:class="{'show':showaddmodal}">
       <div class="row p-l-40 p-r-40 p-t-10 p-b-10 center-on-small-only">
         <h5>
           <i class="material-icons pos-relative top-4 m-l-10 m-r-10"
