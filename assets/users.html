@@ -119,7 +119,7 @@
 
     <section class="user-list-section" x-init="getUsers()">
       <ul class="collapsible hide-on-med-and-up">
-        <template x-for="user in users">
+        <template x-for="user in pageusers">
         <li class="user-list-item">
           <div class="collapsible-header">
             <i
@@ -166,7 +166,7 @@
             </tr>
           </thead>
           <tbody class="desktop-tabel-tbody" >
-            <template x-for="user in users">
+            <template x-for="user in pageusers">
 
               <tr>
                 <td x-text="user.id"></td>
@@ -219,8 +219,8 @@
 
 
 
-    <div class="add-user-modal-back " x-bind:class="{'dis-none':!showaddmodal}" x-on:click="showaddmodal=false"></div>
-    <div class="add-user-modal rounded_top_30 container trans-0-3" x-bind:class="{'show':showaddmodal}">
+    <div class="add-user-modal-back " x-show="showaddmodal"  x-transition:enter.duration.300ms x-on:click="showaddmodal=false"></div>
+    <div class="add-user-modal rounded_top_30 container trans-0-3" x-bind:class="showaddmodal && 'show'">
       <div class="row p-l-40 p-r-40 p-t-10 p-b-10 center-on-small-only">
         <h5>
           <i class="material-icons pos-relative top-4 m-l-10 m-r-10"
