@@ -204,13 +204,19 @@
           of
           <span class="blue-text darken-2 m-l-5 m-r-5">100</span>
         </div>
+
+        <strong x-text="cuurnpage" class="page-number blue-text "></strong>
+
+
         <div class="pagination-buttons">
           <i
             class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-1 rounded-pill white-text waves-effect waves-light"
+            x-on:click="prevpage()"
             >keyboard_arrow_left</i
           >
           <i
             class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-1 rounded-pill white-text waves-effect waves-light"
+            x-on:click="nextpage()"
             >keyboard_arrow_right</i
           >
         </div>

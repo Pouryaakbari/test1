@@ -22,10 +22,24 @@
             })
         },
         pagination(){
-            this.pagecount = Math.ceil( this.users.length / this.itemcount)
+            this.pagecount = Math.ceil( this.users.length / this.itemcount)  
             let start = (this.cuurnpage * this.itemcount) - this.itemcount
             let end = this.cuurnpage * this.itemcount
             this.pageusers=this.users.slice(start,end)
+        },
+        nextpage(){
+            this.cuurnpage++
+            if(this.cuurnpage > this.pagecount){
+                this.cuurnpage = this.pagecount
+            }
+            this.pagination()
+        },
+        prevpage(){
+            this.cuurnpage--
+            if(this.cuurnpage < 1){
+                this.cuurnpage = 1
+            }
+            this.pagination()
         }
            
     }))
