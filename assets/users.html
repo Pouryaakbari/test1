@@ -194,12 +194,11 @@
       >
         <div class="pagination-item-cont flex-l p-l-10 flex-l-m">
           showding
-          <span class="max-w-50 m-l-5 m-r-5">
+          <span class="max-w-50 m-l-5 m-r-5" x-init="$watch('itemcount',value=>(handelchangeitemcount(value)))">
             <input
               type="number"
               class="blue-text darken-2 no-border center-align m-b-0 pos-relative top-3"
-              x-on:change="handelchangeitemcount($el)"
-              x-bind:value="itemcount"
+              x-model="itemcount" x-on:change="pagination()"
               
             />
           </span>

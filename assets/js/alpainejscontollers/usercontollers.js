@@ -41,11 +41,9 @@
             }
             this.pagination()
         },
-        handelchangeitemcount(e){
-            this.itemcount = e.value 
-            if(this.itemcount < 1){this.itemcount = 1}
-            if(this.itemcount > this.users.length){this.itemcount = this.users.length}
-            this.pagination()
+        handelchangeitemcount(value){ 
+            if(value < 1){this.itemcount = 1}
+            if(value > this.users.length){this.itemcount = this.users.length}
         }
            
     }))
