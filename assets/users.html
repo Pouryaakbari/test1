@@ -197,12 +197,14 @@
           <span class="max-w-50 m-l-5 m-r-5">
             <input
               type="number"
-              class="blue-text darken-2 no-border center-align m-b-0"
-              value="10"
+              class="blue-text darken-2 no-border center-align m-b-0 pos-relative top-3"
+              x-on:change="handelchangeitemcount($el)"
+              x-bind:value="itemcount"
+              
             />
           </span>
           of
-          <span class="blue-text darken-2 m-l-5 m-r-5">100</span>
+          <span class="blue-text darken-2 m-l-5 m-r-5" x-text="users.length"></span>
         </div>
 
         <strong x-text="cuurnpage" class="page-number blue-text "></strong>

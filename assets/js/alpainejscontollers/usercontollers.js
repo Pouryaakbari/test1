@@ -40,6 +40,12 @@
                 this.cuurnpage = 1
             }
             this.pagination()
+        },
+        handelchangeitemcount(e){
+            this.itemcount = e.value 
+            if(this.itemcount < 1){this.itemcount = 1}
+            if(this.itemcount > this.users.length){this.itemcount = this.users.length}
+            this.pagination()
         }
            
     }))
